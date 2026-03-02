@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout - ROME'S CLOTHES</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/CSS/styles.css" />
+  </head>
+  <body>
+    <audio id="bellSound" preload="auto">
+      <source src="assets/media/rome%20standins/bell.mp3" type="audio/mpeg">
+    </audio>
+
+    <header>
+      <a href="index.html" id="logoLink" aria-label="Return to homepage">
+        <img 
+            src="assets/media/rome standins/LOGO  rome.png" 
+            alt="Ritchie's Clothes Logo - Raw Fashion" 
+            class="logo-image" 
+        />
+      </a>
+      <nav>
+        <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">✕</button>
+        <ul>
+          <li><a href="index.html" id="homeLink">HOME</a></li>
+          <li><a href="products.html">PRODUCTS</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+          <li><a href="references.html">REFERENCES</a></li>
+        </ul>
+      </nav>
+      
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open menu">☰</button>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <main class="checkout-page">
+      <section class="checkout-container">
+        <h1 class="page-title">COMPLETE YOUR ORDER</h1>
+        <p class="intro-text">Review your items and enter your details to complete your purchase.</p>
+
+        <div class="checkout-grid">
+          <!-- summary type shi -->
+          <section class="order-summary">
+            <h2>ORDER SUMMARY</h2>
+            <div id="checkoutItemsList" class="checkout-items-list">
+              <!-- js will add shi here -->
+            </div>
+            <div class="order-total">
+              <span>TOTAL:</span>
+              <span id="orderTotal" class="total-price">$0.00</span>
+            </div>
+          </section>
+
+          <!--fill out the info type shi -->
+          <section class="checkout-form-section">
+            <h2>YOUR DETAILS</h2>
+            <form id="checkoutPageForm" class="checkout-form">
+              <div class="form-group">
+                <label for="customerName">Full Name *</label>
+                <input type="text" id="customerName" name="customerName" required placeholder="John Doe">
+              </div>
+
+              <div class="form-group">
+                <label for="customerEmail">Email Address *</label>
+                <input type="email" id="customerEmail" name="customerEmail" required placeholder="john@example.com">
+              </div>
+
+              <div class="form-group">
+                <label for="customerPhone">Phone Number *</label>
+                <input type="tel" id="customerPhone" name="customerPhone" required placeholder="+971 50 123 4567">
+              </div>
+
+              <div class="form-group full-width">
+                <label for="shippingAddress">Shipping Address *</label>
+                <textarea id="shippingAddress" name="shippingAddress" rows="3" required placeholder="Street address, City, Country"></textarea>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="orderNotes">Order Notes (Optional)</label>
+                <textarea id="orderNotes" name="orderNotes" rows="3" placeholder="Any special requests or delivery instructions..."></textarea>
+              </div>
+
+              <div class="checkout-actions">
+                <button type="submit" class="cta-button">PLACE ORDER</button>
+                <a href="products.html" class="back-link">← Continue Shopping</a>
+              </div>
+            </form>
+
+            <div id="checkoutSuccessMessage" class="success-message" style="display: none;">
+              <h3>✓ ORDER CONFIRMED!</h3>
+              <p>Thank you for your order! We will contact you via email shortly with confirmation and shipping details.</p>
+              <a href="index.html" class="cta-button" style="display: inline-block; margin-top: 20px;">RETURN HOME</a>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-column">
+          <h4>SHOP</h4>
+          <ul>
+            <li><a href="products.html#t-shirts">T-Shirts</a></li>
+            <li><a href="products.html#hoodies">Hoodies</a></li>
+            <li><a href="products.html#caps">Caps</a></li>
+            <li><a href="products.html#wallets">Wallets</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>INFO</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>CONTACT</h4>
+          <ul>
+            <li>info@romesclothes.com</li>
+            <li>+971 5316210</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>FOLLOW</h4>
+          <ul>
+            <li>Instagram @romes_designs</li>
+            <li>Twitter @rome_outfits</li>
+            <li>Facebook @theromes</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 ROME'S CLOTHES. ALL RIGHTS RESERVED.</p>
+      </div>
+    </footer>
+    <script src="assets/javascript/script.js"></script>
+  </body>
+</html>

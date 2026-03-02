@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ROME'S CLOTHES - All Products</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/CSS/styles.css" />
+  </head>
+  <body>
+    <audio id="bellSound" preload="auto">
+      <source src="assets/media/rome%20standins/bell.mp3" type="audio/mpeg">
+    </audio>
+
+    <header>
+      <a href="index.html" id="logoLink" aria-label="Return to homepage">
+        <img 
+            src="assets/media/rome standins/LOGO  rome.png" 
+            alt="Ritchie's Clothes Logo - Raw Fashion" 
+            class="logo-image" 
+        />
+      </a>
+      <nav>
+        <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">✕</button>
+        <ul>
+          <li><a href="index.html" id="homeLink">HOME</a></li>
+          <li><a href="products.html" class="active-link">PRODUCTS</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+          <li><a href="references.html">REFERENCES</a></li>
+        </ul>
+      </nav>
+      
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open menu">☰</button>
+      
+      <div class="cart-icon" id="cartIcon">CART (<span id="cartCount">0</span>)</div>
+      <div class="cart-dropdown" id="cartDropdown">
+        <div class="cart-items" id="cartItemsList">
+          <p class="empty-message">Your cart is empty.</p>
+        </div>
+        <div class="cart-footer">
+          <button class="proceed-button" id="proceedButton" disabled>PROCEED</button>
+        </div>
+      </div>
+
+      <div class="checkout-modal" id="checkoutModal">
+        <div class="modal-content">
+          <h3>COMPLETE YOUR ORDER</h3>
+          <p>Please enter your details. We will contact you soon!</p>
+          <form id="checkoutForm">
+            <input type="email" id="checkoutEmail" placeholder="Email Address" required>
+            <input type="tel" id="checkoutPhone" placeholder="Phone Number" required>
+            <div class="modal-actions">
+              <button type="submit" class="cta-button">SUBMIT ORDER</button>
+              <button type="button" class="cancel-button" id="cancelCheckout">CANCEL</button>
+            </div>
+          </form>
+          <p id="successMessage" style="display:none; color: var(--accent); font-weight: 700;">
+            Thank you! You will be contacted via email shortly.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <main>
+      <section class="products-hero">
+        <div class="products-hero-content">
+          <h1>ALL THE RAW GOODS</h1>
+          <p class="tagline">EVERYTHING YOU NEED TO LOOK LESS LIKE A WANNABE</p>
+        </div>
+      </section>
+
+      <section class="product-section">
+        <h2 id="t-shirts">T-SHIRTS </h2>
+        <div class="product-grid">
+          <article class="product-card">
+            <img style="width: 100%; height: 420px;" src="assets/media/rome standins/tees/basilica.jpg" alt="Basilica T-Shirts">
+            <h3>BRUTALIST TEE</h3>
+            <p class="price">$29.99</p>
+            <p class="description">100% cotton. Bold graphics. No compromises.</p>
+            <button class="add-to-cart">ADD TO CART</button>
+          </article>
+          <article class="product-card">
+            <img style="width: 100%; height: 400px;" src="assets/media/rome standins/tees/domus_aurea.jpg" alt="Basilica T-Shirts">
+            <h3>MONOLITH TEE</h3>
+            <p class="price">$29.99</p>
+            <p class="description">Heavyweight fabric. Minimalist design. Built to last.</p>
+            <button class="add-to-cart">ADD TO CART</button>
+          </article>
+          <article class="product-card">
+            <img style="width: 100%; height: 400px;" src="assets/media/rome standins/tees/sant_d'angelo.jpg" alt="Basilica T-Shirts">
+            <h3>GRID TEE</h3>
+            <p class="price">$29.99</p>
+            <p class="description">Structured fit. Subtle texture. The foundation of your style.</p>
+            <button class="add-to-cart">ADD TO CART</button>
+          </article>
+          <article class="product-card">
+            <img style="width: 100%; height: 400px;" src="assets/media/rome standins/tees/trastevere.jpg" alt="Basilica T-Shirts">
+            <h3>PILLAR TEE</h3>
+            <p class="price">$29.99</p>
+            <p class="description">V-neck cut. Breathable cotton. Essential layering piece.</p>
+            <button class="add-to-cart">ADD TO CART</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="product-section">
+        <h2 id="hoodies">HOODIES </h2>
+        <div class="product-grid">
+          <article class="product-card">
+             <img src="assets/media/rome standins/hoodies/trevi.jpg" alt="Hoodie" class="product-image">
+            <h3>CONCRETE HOODIE</h3>
+            <p class="price">$59.99</p>
+            <p class="description">Heavy-duty fabric. Maximum comfort. Raw style.</p>
+            <button class="add-to-cart">ADD TO CART</button>
+          </article>
+          <article class="product-card">
+             <img src="assets/media/rome standins/hoodies/colosseum.jpg" alt="Hoodie" class="product-image">
+            <h3>SLAB HOODIE</h3>
+            <p class="price">$64.99</p>
+            <p class="description">Oversized fit. Fleece lining. Ultimate warmth.</p>
+            <button class="add-to-cart">ADD TO CART</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="product-section">
+        <h2 id="caps">CAPS</h2>
+        <div class="product-grid">
+          <article class="product-card">
+            <img style="max-width: none;" src="assets/media/rome standins/caps/forum.jpg" alt="Cap" class="product-image" width=120%>
+            <h3>STRUCTURE CAP</h3>
+            <p class="price">$24.99</p>
+            <p class="description">Adjustable fit. Clean lines. Timeless design.</p>
+            <button class="add-to-cart">ADD TO CART</button>
+          </article>
+          <article class="product-card">
+            <img style="max-width: none;" src="assets/media/rome standins/caps/palatine.jpg" alt="Cap" class="product-image" width=120%>
+            <h3>REBAR CAP</h3>
+            <p class="price">$29.99</p>
+            <p class="description">Worn look. Embroidered logo. Authentic street vibe.</p>
+            <button class="add-to-cart">ADD TO CART</button>
+          </article>
+        </div>
+      </section>
+      
+      <section class="product-section">
+        <h2 id="wallets">WALLETS</h2>
+        <div class="product-grid">
+          <article class="product-card">
+            <img style="width: 50%;" src="assets/media/rome standins/wallet/pantheon.jpg" alt="Wallet" class="product-image">
+            <h3>MINIMAL WALLET</h3>
+            <p class="price">$34.99</p>
+            <p class="description">Genuine leather. Essential storage. Pure function.</p>
+            <button class="add-to-cart" style="width: 30%;">ADD TO CART</button>
+          </article>
+          </div>
+      </section>
+    </main>
+    
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-column">
+          <h4>SHOP</h4>
+          <ul>
+            <li><a href="products.html#t-shirts">T-Shirts</a></li>
+            <li><a href="products.html#hoodies">Hoodies</a></li>
+            <li><a href="products.html#caps">Caps</a></li>
+            <li><a href="products.html#wallets">Wallets</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>INFO</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>CONTACT</h4>
+          <ul>
+            <li>info@romesclothes.com</li>
+            <li>+971 5316210</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>FOLLOW</h4>
+          <ul>
+            <li>Instagram @romes_designs</li>
+            <li>Twitter @rome_outfits</li>
+            <li>Facebook @theromes</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 ROME'S CLOTHES. ALL RIGHTS RESERVED.</p>
+      </div>
+    </footer>
+    <script src="assets/javascript/script.js"></script>
+  </body>
+</html>

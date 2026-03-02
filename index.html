@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ROME'S CLOTHES - Raw Fashion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/CSS/styles.css" />
+  </head>
+  <body>
+    <!-- Hidden audio element for bell sound -->
+    <audio id="bellSound" preload="auto">
+      <source src="assets/media/rome%20standins/bell.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <header>
+      <!-- LORETTA REPLACE THIS DIV WITH THE IMAGE AND USE THE SAME CLASS -->
+      <a href="index.html" id="logoLink" aria-label="Return to homepage">
+        <img 
+            src="assets/media/rome standins/LOGO  rome.png" 
+            alt="Ritchie's Clothes Logo - Raw Fashion" 
+            class="logo-image" 
+        />
+      </a>
+      <!-- -->
+
+      <nav>
+        <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">✕</button>
+        <ul>
+          <li>
+            <a href="index.html" id="homeLink" class="active-link">HOME</a>
+          </li>
+          <li><a href="products.html">PRODUCTS</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+          <li><a href="references.html">REFERENCES</a></li>
+        </ul>
+      </nav>
+      
+      <!-- Mobile hamburger menu button - only visible on small screens -->
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open menu">☰</button>
+      
+      <!-- Cart Icon - Shows number of items, clicking toggles dropdown -->
+      <div class="cart-icon" id="cartIcon">
+        CART (<span id="cartCount">0</span>)
+      </div>
+      
+      <!-- Cart Dropdown - Appears when cart icon is clicked, shows cart items -->
+      <div class="cart-dropdown" id="cartDropdown">
+        <div class="cart-items" id="cartItemsList">
+          <p class="empty-message">Your cart is empty.</p>
+        </div>
+        <div class="cart-footer">
+          <!-- Proceed button is disabled when cart is empty -->
+          <button class="proceed-button" id="proceedButton" disabled>
+            PROCEED
+          </button>
+        </div>
+      </div>
+
+      <!-- Checkout Modal - Overlay that appears when proceeding to checkout -->
+      <div class="checkout-modal" id="checkoutModal">
+        <div class="modal-content">
+          <h3>COMPLETE YOUR ORDER</h3>
+          <p>Please enter your details. We will contact you soon!</p>
+          <form id="checkoutForm">
+            <input
+              type="email"
+              id="checkoutEmail"
+              placeholder="Email Address"
+              required
+            />
+            <input
+              type="tel"
+              id="checkoutPhone"
+              placeholder="Phone Number"
+              required
+            />
+            <div class="modal-actions">
+              <button type="submit" class="cta-button">SUBMIT ORDER</button>
+              <button type="button" class="cancel-button" id="cancelCheckout">
+                CANCEL
+              </button>
+            </div>
+          </form>
+          <p
+            id="successMessage"
+            style="display: none; color: var(--accent); font-weight: 700"
+          >
+            Thank you! You will be contacted via email shortly.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Overlay - Dark background that appears when mobile menu is open -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <!-- Hero Section - Main banner at top of homepage -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>ROME'S CLOTHES</h1>
+        <p class="tagline">WEAR OUR ARMOUR AND CONQUER THE STREETS.</p>
+
+        <!-- SAME THING HERE-->
+        <img src="assets/media/rome%20standins/banner.jpg" alt="A model wearing a black, oversized, brutalist-style hoodie with thick, high-contrast borders" class="hero-image">
+
+        <a href="products.html" class="cta-button">SHOP NOW</a>
+      </div>
+    </section>
+
+    <!-- 
+      FEATURED PRODUCTS SECTION - Sticky Scroll Design
+      
+      How it works:
+      1. This section has dynamic height calculated by JavaScript based on product content
+      2. The .featured-container uses position:sticky to stick below the header (78px)
+      3. Left side (40%) shows heading and stays fixed
+      4. Right side (60%) contains scrollable products
+      5. JavaScript syncs the right side scroll with page scroll position
+      6. As you scroll down the page, products appear to scroll while left side stays static
+      7. Section "unsticks" after you've scrolled through all products
+    -->
+    <section class="featured-products" id="featuredProducts">
+      <!-- Sticky container that stays in place while scrolling -->
+      <div class="featured-container">
+        <!-- Left side - Static heading that doesn't move -->
+        <div class="featured-left" id="featuredLeft">
+          <h2>LATEST DROPS</h2>
+          <p class="featured-subtitle">Scroll through our newest releases</p>
+        </div>
+        
+        <!-- Right side - Products that scroll synchronously with page scroll -->
+        <div class="featured-right" id="featuredRight">
+          <!-- Container holding all product cards - its height determines scroll distance -->
+          <div class="product-scroll-container">
+            <article class="product-card">
+              <div>
+                <img
+                  src="assets/media/rome standins/tees/basilica.jpg"
+                  alt="Basilica T-Shirts"
+                  class="product-image"
+                />
+              </div>
+              <div>
+                <h3>BRUTALIST TEE</h3>
+                <p class="price">$29.99</p>
+                <p class="description">
+                  100% cotton. Bold graphics. No compromises.
+                </p>
+              </div>
+              <button class="add-to-cart">ADD TO CART</button>
+            </article>
+
+            <article class="product-card">
+              <div>
+                <img
+                  src="assets/media/rome standins/hoodies/trevi.jpg"
+                  alt="Concrete Hoodie"
+                  class="product-image"
+                />
+              </div>
+              <div>
+                <h3>CONCRETE HOODIE</h3>
+                <p class="price">$59.99</p>
+                <p class="description">
+                  Heavy-duty fabric. Maximum comfort. Raw style.
+                </p>
+              </div>
+              <button class="add-to-cart">ADD TO CART</button>
+            </article>
+
+            <article class="product-card">
+              <div>
+                <img
+                  src="assets/media/rome standins/caps/forum.jpg"
+                  alt="Structure Cap"
+                  class="product-image"
+                />
+              </div>
+              <div>
+                <h3>STRUCTURE CAP</h3>
+                <p class="price">$24.99</p>
+                <p class="description">
+                  Adjustable fit. Clean lines. Timeless design.
+                </p>
+              </div>
+              <button class="add-to-cart">ADD TO CART</button>
+            </article>
+
+            <article class="product-card">
+              <div>
+                <img
+                  src="assets/media/rome standins/wallet/pantheon.jpg"
+                  alt="Minimal Wallet"
+                  class="product-image"
+                />
+              </div>
+              <div>
+                <h3>MINIMAL WALLET</h3>
+                <p class="price">$34.99</p>
+                <p class="description">
+                  Genuine leather. Essential storage. Pure function.
+                </p>
+              </div>
+              <button class="add-to-cart">ADD TO CART</button>
+            </article>
+            
+            <article class="product-card">
+              <div>
+                <img
+                  src="assets/media/rome standins/discover/blackt.jpg"
+                  alt="Essential Black Tee"
+                  class="product-image"
+                />
+              </div>
+              <div>
+                <h3>ESSENTIAL BLACK TEE</h3>
+                <p class="price">$24.99</p>
+                <p class="description">
+                  Classic black tee. Premium cotton. Everyday essential.
+                </p>
+              </div>
+              <button class="add-to-cart">ADD TO CART</button>
+            </article>
+            
+            <article class="product-card">
+              <div>
+                <img
+                  src="assets/media/rome standins/hoodies/trevi.jpg"
+                  alt="Urban Hoodie"
+                  class="product-image"
+                />
+              </div>
+              <div>
+                <h3>URBAN HOODIE</h3>
+                <p class="price">$64.99</p>
+                <p class="description">
+                  Oversized fit. Street-ready. Ultimate comfort.
+                </p>
+              </div>
+              <button class="add-to-cart">ADD TO CART</button>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories">
+      <h2>BROWSE BY CATEGORY</h2>
+      <div class="category-grid">
+        <a href="products.html#t-shirts" class="category-link">
+          <div class="category-item">
+            <img
+              src="assets/media/rome standins/discover/blackt.jpg"
+              alt="Plain Black T-Shirt"
+              class="category-image"
+            />
+            <h3>T-SHIRTS</h3>
+            <p>Explore Collection →</p>
+          </div>
+        </a>
+
+        <a href="products.html#hoodies" class="category-link">
+          <div class="category-item">
+            <img
+              src="assets/media/rome standins/discover/greyhood.jpg"
+              alt="Grey Hoodie"
+              class="category-image"
+            />
+            <h3>HOODIES</h3>
+            <p>Explore Collection →</p>
+          </div>
+        </a>
+
+        <a href="products.html#caps" class="category-link">
+          <div class="category-item">
+            <img
+              src="assets/media/rome standins/discover/blackcap.jpg"
+              alt="Plain Black cap"
+              class="category-image"
+            />
+            <h3>CAPS</h3>
+            <p>Explore Collection →</p>
+          </div>
+        </a>
+
+        <a href="products.html#wallets" class="category-link">
+          <div class="category-item">
+            <img
+              src="assets/media/rome standins/discover/blackwallet.jpg"
+              alt="Plain Black Leather Wallet"
+              class="category-image"
+            />
+            <h3>WALLETS</h3>
+            <p>Explore Collection →</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <h2>STAY UPDATED</h2>
+      <p>Get exclusive access to new drops and limited editions.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input
+          type="email"
+          id="newsletterEmail"
+          name="email"
+          placeholder="YOUR EMAIL ADDRESS"
+          required
+          aria-label="Email address"
+        />
+        <button type="submit">SUBSCRIBE</button>
+      </form>
+      <p
+        class="form-message"
+        id="newsletterMessage"
+        style="display: none; margin-top: 15px; font-weight: 700"
+      ></p>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-column">
+          <h4>SHOP</h4>
+          <ul>
+            <li><a href="products.html#t-shirts">T-Shirts</a></li>
+            <li><a href="products.html#hoodies">Hoodies</a></li>
+            <li><a href="products.html#caps">Caps</a></li>
+            <li><a href="products.html#wallets">Wallets</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>INFO</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>CONTACT</h4>
+          <ul>
+            <li>info@romesclothes.com</li>
+            <li>+971 5316210</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>FOLLOW</h4>
+          <ul>
+            <li>Instagram @romes_designs</li>
+            <li>Twitter @rome_outfits</li>
+            <li>Facebook @theromes</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 ROME'S CLOTHES. ALL RIGHTS RESERVED.</p>
+      </div>
+    </footer>
+    <script src="assets/javascript/script.js"></script>
+  </body>
+</html>

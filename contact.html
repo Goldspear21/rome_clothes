@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Rome's Clothes</title>
+    <meta name="description" content="Get in touch with Ritchie's Clothes for customer service, wholesale inquiries, or custom orders.">
+    <link rel="stylesheet" href="assets/CSS/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <audio id="bellSound" preload="auto">
+      <source src="assets/media/rome%20standins/bell.mp3" type="audio/mpeg">
+    </audio>
+
+    <header>
+        <a href="index.html" id="logoLink" aria-label="Return to homepage">
+        <img 
+            src="assets/media/rome standins/LOGO  rome.png" 
+            alt="Ritchie's Clothes Logo - Raw Fashion" 
+            class="logo-image" 
+        />
+      </a>
+        <nav>
+            <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">✕</button>
+            <ul>
+                <li><a href="index.html" id="homeLink">HOME</a></li>
+                <li><a href="products.html">PRODUCTS</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html" class="active-link">CONTACT</a></li>
+                <li><a href="references.html">REFERENCES</a></li>
+            </ul>
+        </nav>
+        
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open menu">☰</button>
+        
+        <div class="cart-icon" id="cartIcon">CART (<span id="cartCount">0</span>)</div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <main class="contact-page">
+        <h1 class="page-title">Contact Rome's</h1>
+        <p class="intro-text">
+            We're here to help. Whether you have a question about an order, need help with a custom design, or want to discuss a wholesale partnership, reach out using the form below.
+        </p>
+
+        <!-- MAIN GRID CONTAINER -->
+        <div class="contact-grid-container">
+            <!-- 1. CONTACT INFO SECTION (GRID ITEM 1) -->
+            <section class="contact-info">
+                <h2>Our Details</h2>
+                <div class="info-block">
+                    <h3>General Inquiries</h3>
+                    <p>Email: info@romesclothes.com</p>
+                    <p>Phone: +971 56 3457 801</p>
+                </div>
+                
+                <div class="info-block">
+                    <h3>Location</h3>
+                    <p>Al Warqa 1, Dubai, UAE</p>
+                    <p>Open: Mon - Thu, 9:00 AM - 5:00 PM</p>
+                </div>
+
+                <div class="info-block">
+                    <h3>Socials</h3>
+                    <p>Instagram: @romes_designs</p>
+                    <p>LinkedIn: /company/romesclothes</p>
+                </div>
+            </section>
+            
+            
+            <section class="contact-form">
+                <h2>Send Us a Message</h2>
+                <form action="#" method="POST">
+                    
+                    
+                    <div class="form-grid">
+                        
+                        <div class="form-group">
+                            <label for="full-name">Full Name</label>
+                            <input type="text" id="full-name" name="fullName" required placeholder="Harry Maguire">
+                        </div>
+
+                        <!-- Input Type: Email -->
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="harry@example.com">
+                        </div>
+                        
+                        <!-- Input Type: Tel -->
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+971 50 123 4567">
+                        </div>
+
+                        <!-- Input Type: Date -->
+                        <div class="form-group">
+                            <label for="date">Preferred Follow-up Date</label>
+                            <input type="date" id="date" name="preferredDate">
+                        </div>
+                        
+                        <!-- Textarea -->
+                        <div class="form-group full-width">
+                            <label for="message">Your Message or Inquiry</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Tell us about your custom request or question..."></textarea>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">Send Inquiry</button>
+                </form>
+                <p class="form-message" id="contactMessage" style="display:none; margin-top: 20px; font-weight: 700;"></p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-column">
+          <h4>SHOP</h4>
+          <ul>
+            <li><a href="products.html#t-shirts">T-Shirts</a></li>
+            <li><a href="products.html#hoodies">Hoodies</a></li>
+            <li><a href="products.html#caps">Caps</a></li>
+            <li><a href="products.html#wallets">Wallets</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>INFO</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>CONTACT</h4>
+          <ul>
+            <li>info@romesclothes.com</li>
+            <li>+971 5316210</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>FOLLOW</h4>
+          <ul>
+            <li>Instagram @romes_designs</li>
+            <li>Twitter @rome_outfits</li>
+            <li>Facebook @theromes</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 ROME'S CLOTHES. ALL RIGHTS RESERVED.</p>
+      </div>
+    </footer>
+    <script src="assets/javascript/script.js"></script>
+</body>
+</html>
