@@ -6,8 +6,17 @@ This website is a clothes shopping website, with interactive css design, interac
 ---
 ## 📱Project screenshots
 ![Animation](https://github.com/user-attachments/assets/cc6249d2-a8a3-4d15-bd3a-87f35c455971)
+---
 ![main-page](https://res.cloudinary.com/dfio7wdjh/image/upload/v1772460075/Screenshot_2026-03-02_174219_szqdbr.png)
 ![add-to-cart](https://res.cloudinary.com/dfio7wdjh/image/upload/v1772460121/Screenshot_2026-03-02_180144_ztekkz.png)
 ![order-page](https://res.cloudinary.com/dfio7wdjh/image/upload/v1772460207/Screenshot_2026-03-02_180310_tt5mzg.png)
 
+---
+## 🚀 Features
+- Static scroll, when you scroll a part of the page stands still.
+- Uniform emphasized design.
+- Add to cart and cart page, remove from cart.
+- Feedback page.
+---
 
+Made with love for design and fashion 👕👟
